@@ -86,6 +86,8 @@ public class UserController {
          */
         Set<String> urls = userService.getUserMeunUrlsById(ub);
 
+        //这个就是我们要把urls放进set里面然后再放进session里面
+
         request.getSession().setAttribute("urls", urls);
 
         return userService.getMeunList(ub);
