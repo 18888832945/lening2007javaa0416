@@ -28,6 +28,10 @@ public class DeptController {
     public ResultInfo saveDeptPost(Long deptid,@RequestBody Long[] postids){
         try {
             deptService.saveDeptPost(deptid,postids);
+
+
+
+
             return new ResultInfo(true, "编辑成功");
         }catch (Exception e){
             return  new ResultInfo(false, "编辑失败");
